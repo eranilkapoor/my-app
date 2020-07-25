@@ -1,0 +1,51 @@
+<div class="container" style="background-color: #f6f6ef;">
+	<div class="row" style="background-color: #ff6600; padding: 10px 0px; font-weight: bold;">
+		<div class="col-2">
+			Comments
+		</div>
+		<div class="col-2">
+			Vote Count
+		</div>
+		<div class="col-2">
+			UpVote
+		</div>
+		<div class="col-6">
+			News Details
+		</div>
+	</div>
+	<div class="row" *ngFor="let data of newData.hits" style="border-bottom: 1px solid #ccc;">
+		<div class="col-2">
+			{{data.num_comments}}
+		</div>
+		<div class="col-2">
+			{{data.points}}
+		</div>
+		<div class="col-2">
+			^
+		</div>
+		<div class="col-6" style="overflow-y: scroll;">
+			{{data.title}} {{data.url}} by {{data.author}} [Hide]
+		</div>
+	</div>
+	<div class="row" style="padding: 10px; font-weight: bold;">
+		<div class="col-6">
+			
+		</div>
+		<div class="col-6" style="color: #ff6600; text-align: right;">
+			Previous | Next
+		</div>
+	</div>
+	<div class="row" style="border-bottom: 3px solid #ff6600; border-top: 3px solid #ff6600;">
+		<div class="col-12">
+			<canvas
+		      baseChart
+		      [chartType]="'line'"
+		      [datasets]="chartData"
+		      [labels]="chartLabels"
+		      [options]="chartOptions"
+		      [legend]="true">
+		  	</canvas>
+		</div>
+	</div>
+</div>
+<router-outlet></router-outlet>
