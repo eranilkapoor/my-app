@@ -2,7 +2,7 @@
 
 ## App is based on Server Side Rendring SSR.
  
-I have used `ng add @nguniversal/express-engine` command to create the SSR app. 
+I have used `ng add @nguniversal/express-engine` command to create the SSR app. There are following things I have done `Modules`, `Components`, `Services`, `Directives`, `bootstrap`, `Chart.js` & other part of sever side and angulr app elements.  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
